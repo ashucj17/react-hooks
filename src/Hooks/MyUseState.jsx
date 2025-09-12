@@ -35,13 +35,14 @@ const MyUseState = () => {
         <h1>Hello Good Day {flag ? name : ""} </h1>
         <button onClick={great}>Great</button>
         <hr/>
-        <div>
+        <div class="container">
+        <div className='unaryOperator'>
         <button onClick={increment}>Increment</button>
         <div><h2>{count}</h2></div>
         <button onClick={decrement}>Decrement</button>
         <hr/>
         </div>
-        <div>
+        <div className='nameList'>
             <form onSubmit={addNames}>
                 <input type="text" value={name} onChange={(e)=>{
                     setName(e.target.value)
@@ -56,6 +57,7 @@ const MyUseState = () => {
                 }
                 </ul>
             </form>
+            </div>
         </div>
     </>
   )
