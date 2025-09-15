@@ -4,6 +4,7 @@ import ClassComponent from './ReactLifeCycle/ClassComponent'
 import FunctionalComponent from './ReactLifeCycle/FunctionalComponent'
 import MyUseState from './Hooks/MyUseState'
 import MyUseEffect from './Hooks/MyUseEffect'
+import MyUseRef from './Hooks/MyUseRef'
 
 
 
@@ -21,6 +22,8 @@ function App() {
       {show &&<FunctionalComponent /> }
       <MyUseState /> */}
       <MyUseEffect />
+      <hr></hr>
+      <MyUseRef />
       
     </>
   )
