@@ -11,11 +11,17 @@ const Parent = () => {
         <CustomInput ref={inputEle} changeName={(e)=>{
             setName(e.target.value)
         }} />
-        <button onClick={()=>{
+       {/*  <button onClick={()=>{
             inputEle.current.focus()
         }}>Focus</button>
         <button onClick={()=>{
             inputEle.current.value=""
+        }}>Clear</button> */}
+        <button onClick={()=>{
+            inputEle.current.focusInput()
+        }}>Focus</button>
+        <button onClick={()=>{
+            inputEle.current.clearInput()
         }}>Clear</button>
     </div>
   )
