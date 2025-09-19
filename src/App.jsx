@@ -6,6 +6,7 @@ import MyUseState from './Hooks/UseState/MyUseState'
 import MyUseEffect from './Hooks/UseEffect/MyUseEffect'
 import MyUseRef from './Hooks/UseRef/MyUseRef'
 import Parent from './Hooks/UseRef/Parent'
+import { UserContext } from './Context/UserContext'
 
 
 
@@ -13,6 +14,7 @@ import Parent from './Hooks/UseRef/Parent'
 
 function App() {
   const [show, setShow] = useState(true)
+  const [user, setUser] = useState('Ashish')
 
   return (
     <>
@@ -26,7 +28,9 @@ function App() {
       <MyUseEffect />
       <hr></hr>
       <MyUseRef />*/}
+      <UserContext.Provider value={{user, setUser}}>
       <Parent />
+      </UserContext.Provider>
       
     </>
   )
