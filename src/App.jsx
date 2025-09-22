@@ -6,7 +6,7 @@ import MyUseState from './Hooks/UseState/MyUseState'
 import MyUseEffect from './Hooks/UseEffect/MyUseEffect'
 import MyUseRef from './Hooks/UseRef/MyUseRef'
 import Parent from './Hooks/UseRef/Parent'
-import { UserContext } from './Context/UserContext'
+import { UserContext, UserContextProvider } from './Context/UserContext'
 
 
 
@@ -15,6 +15,7 @@ import { UserContext } from './Context/UserContext'
 function App() {
   const [show, setShow] = useState(true)
   const [user, setUser] = useState('Ashish')
+  const [name, setName] = useState('')
 
   return (
     <>
@@ -24,14 +25,13 @@ function App() {
         setShow(!show)
       }}>Toggle Component</button>
       {show &&<FunctionalComponent /> }
-      <MyUseState /> 
+      <MyUseState />
       <MyUseEffect />
       <hr></hr>
       <MyUseRef />*/}
-      <UserContext.Provider value={{user, setUser}}>
+      <UserContextProvider userDetails={{name , setName,user, setUser}}>
       <Parent />
-      </UserContext.Provider>
-      
+      </UserContextProvider>
     </>
   )
 }
