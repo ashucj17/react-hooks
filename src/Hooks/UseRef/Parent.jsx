@@ -31,6 +31,7 @@ const Parent = () => {
         <button onClick={()=>{
             inputEle.current.clearInput()
         }}>Clear</button>
+        <hr/>
     </div>
   )
 }

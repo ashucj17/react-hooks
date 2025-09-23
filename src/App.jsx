@@ -7,6 +7,7 @@ import MyUseEffect from './Hooks/UseEffect/MyUseEffect'
 import MyUseRef from './Hooks/UseRef/MyUseRef'
 import Parent from './Hooks/UseRef/Parent'
 import { UserContext, UserContextProvider } from './Context/UserContext'
+import Counter from './Hooks/UseReducer/Counter'
 
 
 
@@ -32,6 +33,7 @@ function App() {
       <UserContextProvider userDetails={{name , setName,user, setUser}}>
       <Parent />
       </UserContextProvider>
+      <Counter/>
     </>
   )
 }
