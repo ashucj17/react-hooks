@@ -8,6 +8,8 @@ import MyUseRef from './Hooks/UseRef/MyUseRef'
 import Parent from './Hooks/UseRef/Parent'
 import { UserContext, UserContextProvider } from './Context/UserContext'
 import Counter from './Hooks/UseReducer/Counter'
+import UserDetails from './Hooks/UseReducer/UserDetails'
+
 
 
 
@@ -34,6 +36,7 @@ function App() {
       <Parent />
       </UserContextProvider>
       <Counter/>
+      <UserDetails/>
     </>
   )
 }
